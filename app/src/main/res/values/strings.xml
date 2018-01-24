@@ -2,4 +2,6 @@
     <string name="app_name">PopularMovies</string>
     <string name="most_popular">Popularity</string>
     <string name="highest_rated">Ratings</string>
+    <string name="voting">Votings:</string>
+
 </resources>
