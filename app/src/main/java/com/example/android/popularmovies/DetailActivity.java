@@ -12,8 +12,10 @@ public class DetailActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
+        String msg = null;
         Intent myIntent = getIntent();
         Bundle data = getIntent().getExtras();
         Movie movie = (Movie) data.getParcelable("movie");
