@@ -8,6 +8,7 @@ import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
 
+//This activity is created to show the details of the movie.
 public class DetailActivity extends AppCompatActivity {
 
     @Override
@@ -15,8 +16,6 @@ public class DetailActivity extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
-        //String msg = null;
-        Intent myIntent = getIntent();
         Bundle data = getIntent().getExtras();
         Movie movie = (Movie) data.getParcelable("movie");
         String title = movie.getTitle();
@@ -25,12 +24,11 @@ public class DetailActivity extends AppCompatActivity {
         Double voteAvg = movie.getVoteAverage();
         String vote = voteAvg.toString();
         String imageURL = movie.getImageUrl();
-        TextView tv = (TextView)findViewById(R.id.titleTV);
-        TextView overviewTV = (TextView)findViewById(R.id.synopsisTV);
-        TextView releaseDateTV = (TextView)findViewById(R.id.releasedateTV);
-        TextView voteTextView = (TextView)findViewById(R.id.voteTV);
-        ImageView image = (ImageView)findViewById(R.id.imageView);
-
+        TextView tv = (TextView) findViewById(R.id.titleTV);
+        TextView overviewTV = (TextView) findViewById(R.id.synopsisTV);
+        TextView releaseDateTV = (TextView) findViewById(R.id.releasedateTV);
+        TextView voteTextView = (TextView) findViewById(R.id.voteTV);
+        ImageView image = (ImageView) findViewById(R.id.imageView);
         tv.setText(title);
         overviewTV.setText(overview);
         releaseDateTV.setText(releaseDate);

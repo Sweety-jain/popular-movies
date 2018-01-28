@@ -14,33 +14,40 @@ public class Movie implements Parcelable {
     private String releaseDate;
     private Double voteAverage;
     private String plotSynopsis;
-public Movie(String mTitle,String iUrl,String rDate,Double vAverage,String pSynopsis){
-    this.movieTitle = mTitle;
-    this.imageUrl = iUrl;
-    this.releaseDate = rDate;
-    this.voteAverage = vAverage;
-    this.plotSynopsis = pSynopsis;
-}
-    protected Movie(Parcel in) {
-    this.movieTitle = in.readString();
-    this.imageUrl = in.readString();
-    this.releaseDate = in.readString();
-    this.voteAverage = in.readDouble();
-    this.plotSynopsis = in.readString();
+
+    public Movie(String mTitle, String iUrl, String rDate, Double vAverage, String pSynopsis) {
+        this.movieTitle = mTitle;
+        this.imageUrl = iUrl;
+        this.releaseDate = rDate;
+        this.voteAverage = vAverage;
+        this.plotSynopsis = pSynopsis;
     }
-    public String getTitle(){
+
+    protected Movie(Parcel in) {
+        this.movieTitle = in.readString();
+        this.imageUrl = in.readString();
+        this.releaseDate = in.readString();
+        this.voteAverage = in.readDouble();
+        this.plotSynopsis = in.readString();
+    }
+
+    public String getTitle() {
         return movieTitle;
     }
-    public String getOverview(){
+
+    public String getOverview() {
         return plotSynopsis;
     }
-    public String getImageUrl(){
+
+    public String getImageUrl() {
         return imageUrl;
     }
-    public String getReleaseDate(){
+
+    public String getReleaseDate() {
         return releaseDate;
     }
-    public Double getVoteAverage(){
+
+    public Double getVoteAverage() {
         return voteAverage;
     }
 
